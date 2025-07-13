@@ -8,14 +8,15 @@ const StyledStat = styled.div`
 
   padding: 1.6rem;
   display: grid;
-  grid-template-columns: 6.4rem 1fr;
+  grid-template-columns: 1fr 6.4rem;
   grid-template-rows: auto auto;
-  column-gap: 1.6rem;
-  row-gap: 0.4rem;
+  /* column-gap: 1.6rem;
+  row-gap: 0.4rem; */
 `;
 
 const Icon = styled.div`
   grid-row: 1 / -1;
+  grid-column: 2;
   aspect-ratio: 1;
   border-radius: 50%;
   display: flex;
@@ -50,9 +51,9 @@ const Value = styled.p`
 function Stat({ icon, title, value, color }) {
   return (
     <StyledStat>
+      <Icon color={color}>{icon}</Icon>
       <Value>{value}</Value>
       <Title>{title}</Title>
-      <Icon color={color}>{icon}</Icon>
     </StyledStat>
   );
 }

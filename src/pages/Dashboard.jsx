@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 import Heading from '../ui/Heading';
 import { HiOutlineSquares2X2, HiOutlineChevronRight } from 'react-icons/hi2';
-import { useEffect } from 'react';
-import { getPosts } from '../services/apiPosts';
 import DashboardLayout from '../features/dashboard/DashboardLayout';
 
 const StyledDashboardLayout = styled.div`
@@ -34,19 +32,6 @@ const StyledComponent = styled.div`
 `;
 
 function Dashboard() {
-  useEffect(() => {
-    const fetchPosts = async () => {
-      try {
-        const posts = await getPosts();
-        console.log(posts);
-      } catch (error) {
-        console.error('Error fetching posts:', error);
-      }
-    };
-
-    fetchPosts();
-  }, []);
-
   return (
     <>
       <StyledDashboardLayout>

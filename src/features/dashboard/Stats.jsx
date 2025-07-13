@@ -1,15 +1,20 @@
 import { HiOutlineEye, HiOutlineClipboardDocumentCheck } from 'react-icons/hi2';
 import Stat from './Stat';
+import styled from 'styled-components';
+
+const StatColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+`;
 
 function Stats({ publishCount, viewsCount }) {
-  // 1.
   const numPublish = publishCount.length;
 
-  // 2.
   const numViews = viewsCount.length;
 
   return (
-    <>
+    <StatColumn>
       <Stat
         title='Total Publish'
         color='indigo'
@@ -22,7 +27,7 @@ function Stats({ publishCount, viewsCount }) {
         icon={<HiOutlineEye />}
         value={numViews}
       />
-    </>
+    </StatColumn>
   );
 }
 

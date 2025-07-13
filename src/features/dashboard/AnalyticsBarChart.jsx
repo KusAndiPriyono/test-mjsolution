@@ -3,7 +3,7 @@ import DashboardBox from './DashboardBox';
 import Heading from '../../ui/Heading';
 
 const StyledSalesChart = styled(DashboardBox)`
-  grid-column: 1 / -1;
+  /* grid-column: 1 / -1; */
 
   /* Hack to change grid line colors */
   & .recharts-cartesian-grid-horizontal line,
