@@ -7,6 +7,7 @@ const DashboardBox = styled.div`
   border-radius: var(--border-radius-md);
 
   padding: 3.2rem;
+  height: 34rem;
 
   display: flex;
   flex-direction: column;

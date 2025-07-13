@@ -23,7 +23,9 @@ function DashboardLayout() {
 
   return (
     <StyledDashboardLayout>
-      <Stats publishCount={publishCount} viewsCount={viewsCount} />
+      <div style={{ padding: '0 50rem 0 0' }}>
+        <Stats publishCount={publishCount} viewsCount={viewsCount} />
+      </div>
       <AnalyticsBarChart />
       <LastDraft posts={posts} />
       <LastProject posts={posts} />
